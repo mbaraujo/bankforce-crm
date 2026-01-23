@@ -15,7 +15,7 @@ jobs:
 
       - name: Block System.debug in Apex classes
         run: |
-          if grep -R --line-number "System\.debug" force-app/main/default/classes; then
+          if grep -R --line-number "System\.debug" bankforce-sfdx/force-app/main/default/classes; then
             echo "❌ System.debug encontrado. Remova antes de subir o código."
             exit 1
           fi
